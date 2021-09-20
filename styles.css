@@ -1,0 +1,315 @@
+:root {
+    /* fonts */
+    --ff-primary: 'Rubik', sans-serif;
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+
+    /* primary colors */
+    --clr-blue: hsl(246, 80%, 60%);
+    --clr-light-red-work: hsl(15, 100%, 70%);
+    --clr-soft-blue-play: hsl(195, 74%, 62%);
+    --light-red-study: hsl(348, 100%, 68%);
+    --clr-lime-green-exercise: hsl(145, 58%, 55%);
+    --clr-violet-social: hsl(264, 64%, 52%);
+    --soft-orange-self-care: hsl(43, 84%, 65%);
+
+    /* neutral colors */
+    --clr-very-dark-blue: hsl(226, 43%, 10%);
+    --clr-dark-blue: hsl(235, 46%, 20%);
+    --clr-desaturated-blue: hsl(235, 45%, 61%);
+    --clr-pale-blue: hsl(236, 100%, 87%);
+}
+
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--clr-very-dark-blue);
+    font-family: var(--ff-primary);
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 54px;
+    color: white;
+    font-weight: var(--fw-light);
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+h3 {
+    font-size: 38px;
+    font-weight: var(--fw-light);
+    color: white;
+}
+
+h4 { 
+    color: white;
+    font-weight: var(--fw-medium);
+    margin-bottom: 20px;
+}
+
+p {
+    color: var(--clr-pale-blue);
+    font-size: 16px;
+    font-weight: var(--fw-light);
+}
+
+.container {
+    max-width: 1440px;
+    min-height: 100vh;
+    background-color: var(--clr-very-dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.dashboard {
+    width: 1110px;
+    display: grid;
+    grid-template-areas: 
+        "person work play study"
+        "person exercise social self-care";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 28px;
+    overflow: hidden;
+    margin: 40px;
+}
+
+.person {
+    grid-area: person;
+    background-color: var(--clr-dark-blue);
+    border-radius: 18px;
+    width: 100%;
+}
+
+.profile {
+    background-color: var(--clr-blue);
+    border-radius: 18px;
+    padding: 32px 28px 88px 28px;
+}
+
+.profile img {
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-bottom: 42px;
+}
+
+.timelines {
+    padding: 28px 28px 10px 28px;
+}
+
+.timelines h4 {
+    font-weight: var(--fw-regular);
+    color: var(--clr-pale-blue);
+}
+
+.timelines h4:hover, .timelines h4:focus {
+    color: white;
+    cursor: pointer;
+}
+
+.show {
+    color: white !important;  
+}
+
+.stats {
+    position: relative;
+    border-radius: 18px;
+    width: 100%;
+    height: 100%;
+}
+
+.summary {
+    background-color: var(--clr-dark-blue);
+    margin-top: 44px;
+    border-radius: 18px;
+    padding: 28px 35px 34px 30px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.summary:hover, .summary:focus, .summary:active {
+    cursor: pointer;
+    background-color: #353977;
+}
+
+.category {
+    display: flex;
+    justify-content: space-between;
+}
+
+.category h4, .category svg {
+    margin: 0;
+}
+
+.category svg:hover path{
+    fill: white;
+}
+
+.work {
+    grid-area: work;
+    background-color: var(--clr-light-red-work);
+    background-image: url(./images/icon-work.svg);
+    background-repeat: no-repeat;
+    background-position: right 18px top -10px;
+}
+
+.play {
+    grid-area: play;
+    background-color: var(--clr-soft-blue-play);
+    background-image: url(./images/icon-play.svg);
+    background-repeat: no-repeat;
+    background-position: right 18px top -10px;
+}
+
+.study { 
+    grid-area: study;
+    background-color: var(--light-red-study);
+    background-image: url(./images/icon-study.svg);
+    background-repeat: no-repeat;
+    background-position: right 18px top -10px;
+}
+
+.exercise {
+    grid-area: exercise;
+    background-color:var(--clr-lime-green-exercise);
+    background-image: url(./images/icon-exercise.svg);
+    background-repeat: no-repeat;
+    background-position: right 18px top -5px;
+}
+
+.social {
+    grid-area: social;
+    background-color: var(--clr-violet-social);
+    background-image: url(./images/icon-social.svg);
+    background-repeat: no-repeat;
+    background-position: right 18px top 0px;
+}
+
+.self-care {
+    grid-area: self-care;
+    background-color: var(--soft-orange-self-care);
+    background-image: url(./images/icon-self-care.svg);
+    background-repeat: no-repeat;
+    background-position: right 18px top -10px;
+}
+
+.attribution {
+    font-size: 12px; 
+    text-align: center;
+    padding: 25px 0;
+    background-color: var(--clr-dark-blue);
+    color: white;
+}
+
+.attribution a { 
+     color: var(--clr-light-red-work);
+}
+
+
+
+@media (max-width: 850px) {
+    .container {
+        height: auto;
+    }
+
+    .dashboard {
+        grid-template-areas: 
+            "person person"
+            "work play"
+            "study exercise"
+            "social self-care";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 200px 1fr 1fr 1fr;
+        grid-gap: 28px;
+        overflow: show;
+    }
+
+    .person {
+        justify-content: center;
+    }
+
+    .profile {
+        display: flex;
+        align-items: center;
+        padding: 30px 28px 34px 28px;
+    }
+
+    .profile img {
+        width: 70px;
+        height: 70px;
+        border: 2px solid white;
+        margin: 0 18px 0 0;
+    }
+
+    .meta {
+        margin: 0;
+    }
+
+    .meta h3 {
+        font-size: 24px;
+    }
+
+    .line-break {
+        display: none;
+    }
+
+    .timelines {
+        display: flex;
+        padding: 24px 28px 6px 30px;
+    }
+
+    .stats {
+        height: 250px;
+    }
+}
+
+/* Media Mobile */
+@media (max-width: 375px) {
+    h2 {
+        font-size: 32px;
+        margin: 0;
+    }
+
+    .dashboard {
+        display: block;
+        margin: 80px 24px 56px 24px;
+    }
+
+    .person {
+        grid-area: person;
+        background-color: var(--clr-dark-blue);
+        border-radius: 18px;
+        width: 100%;
+    }
+
+    .stats {
+        margin: 23px 0;
+        height: 160px;
+    }
+
+    .summary {
+        padding: 26px 35px 26px 30px;
+    }
+
+    .details {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 6px;
+    }
+
+    .previous {
+        margin: 0;
+    }
+}    
+

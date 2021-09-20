@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js"></script>
+
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+</head>
+<body>
+  <div class="container">
+    <div class="dashboard">
+
+      <div class="person">
+        <div class="profile">
+          <img src="./images/image-jeremy.png" alt="Jeremy">
+          <div class="meta">
+            <p>Report for</p>
+            <h3>Jeremy<br class="line-break"> Robson</h3>
+          </div>
+        </div>
+        <div class="timelines">
+          <h4 class="daily-timeframe">Daily</h4>
+          <h4 class="weekly-timeframe">Weekly</h4>
+          <h4 class="monthly-timeframe">Monthly</h4>
+        </div>
+      </div>
+
+      <div class="stats work">
+        <div class="summary">
+          <div class="category">
+            <h4>Work</h4>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+          <div class="details work-details">
+            <h2 class="current">32hrs</h2>
+            <p class="previous">Last Week - 36hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats play">
+        <div class="summary">
+          <div class="category">
+            <h4>Play</h4>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+          <div class="details play-details">
+            <h2 class="current">10hrs</h2>
+            <p class="previous">Last Week - 8hrs</p>
+          </div>
+        </div> 
+      </div>
+
+      <div class="stats study">
+        <div class="summary">
+          <div class="category">
+            <h4>Study</h4>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+          <div class="details study-details">
+            <h2 class="current">4hrs</h2>
+            <p class="previous">Last Week - 7hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats exercise">
+        <div class="summary">
+          <div class="category">
+            <h4>Exercise</h4>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+          <div class="details exercise-details">
+            <h2 class="current">4hrs</h2>
+            <p class="previous">Last Week - 5hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats social">
+        <div class="summary">
+          <div class="category">
+            <h4>Social</h4>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+          <div class="details social-details">
+            <h2 class="current">5hrs</h2>
+            <p class="previous">Last Week - 10hrs</p>  
+          </div>
+        </div>
+      </div>
+
+      <div class="stats self-care">
+        <div class="summary">
+          <div class="category">
+            <h4>Self Care</h4>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+          <div class="details self-care-details">
+            <h2 class="current">2hrs</h2>
+            <p class="previous">Last Week - 2hrs</p>
+          </div>
+        </div>
+      </div>      
+    </div>
+  </div>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Musa</a>.
+  </div>
+
+  
+</body>
+</html>
